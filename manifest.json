@@ -1,0 +1,19 @@
+{
+    "name": "Change GitHub Fonts",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Changes Github font to Helvetica",
+	"icons": { "48": "icon48.png",
+          "128": "icon128.png" },
+    "permissions": [
+        "http://*.github.com/*",
+        "https://github.com/*"
+    ],
+    "content_scripts": [
+	 {
+            "matches": ["http://*/*", "https://*/*"],
+            "css": ["change_github.css"],
+            "run_at": "document_end"
+	 }
+    ]
+}
